@@ -23,6 +23,6 @@
 // console.log(solution(10))
 
 // IS N DIVISIBLE BY (...)
-function isDivisible(n,...factors){
-    return factors.every(factor=> n%factor==0)
-}
+// function isDivisible(n,...factors){
+//     return factors.every(factor=> n%factor==0)
+// }
