@@ -26,3 +26,8 @@
 // function isDivisible(n,...factors){
 //     return factors.every(factor=> n%factor==0)
 // }
+
+// TIDY NUMBERS
+    function tidyNumbers(n){
+        return n.toString('').split('').every((val,ind,arr)=> (arr[ind-1]) ? arr[ind-1] <=val :val)
+    }
