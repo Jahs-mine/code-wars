@@ -28,6 +28,21 @@
 // }
 
 // TIDY NUMBERS
-    function tidyNumbers(n){
-        return n.toString('').split('').every((val,ind,arr)=> (arr[ind-1]) ? arr[ind-1] <=val :val)
-    }
+function tidyNumbers(n) {
+    return n.toString('').split('').every((val, ind, arr) => (arr[ind - 1]) ? arr[ind - 1] <= val : val)
+}
+
+
+ // GET MILITARY TIME
+// var militaryTime = function (time) {
+//     let add = (time.splice(-2) == "PM") ? 12 : 0;
+
+//     let arr = time.slice(0, -2)
+
+//     if (arr[0] == "12" && add) {
+        // do nothing
+    //     }else if(arr[0]=="12"){arr[0]="00"}
+    //     else if(add){arr[0]= (+arr[0] +12) %24}
+
+    //     return arr.join(":")
+    // }
