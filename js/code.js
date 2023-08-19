@@ -28,9 +28,9 @@
 // }
 
 // TIDY NUMBERS
-function tidyNumbers(n) {
-    return n.toString('').split('').every((val, ind, arr) => (arr[ind - 1]) ? arr[ind - 1] <= val : val)
-}
+// function tidyNumbers(n) {
+//     return n.toString('').split('').every((val, ind, arr) => (arr[ind - 1]) ? arr[ind - 1] <= val : val)
+// }
 
 
  // GET MILITARY TIME
@@ -46,3 +46,13 @@ function tidyNumbers(n) {
 
     //     return arr.join(":")
     // }
+
+//DOUBLE CHARS
+function doubleChars(str){
+    return str.split("").map(char=> char + char).join("")
+}
+
+//EXTRACT THE DOMAIN NAME
+function domainName(url){
+    return str = url.split("/").filter(i => i.includes(".")).join("").split(".").filter((i) => i!="www" && i!='')[0]
+}
