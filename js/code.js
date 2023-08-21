@@ -57,22 +57,27 @@
 //     return str = url.split("/").filter(i => i.includes(".")).join("").split(".").filter((i) => i!="www" && i!='')[0]
 // }
 
-// AM I AFRAID
-var amIAfraid= function(day,num){
-    switch (day.toLowerCase()) {
-        case "monday":
-            return num == 12;
-        case "tuesday":
-            return num > 95;
-        case "wednesday":
-            return num == 34;
-        case "thursay":
-            return num == 0;
-        case "friday":
-            return !(num%2);
-        case "saturday":
-            return num == 56;
-        case "sunday":
-            return Math.abs(num)==666;
-    }
+// // AM I AFRAID
+// var amIAfraid= function(day,num){
+//     switch (day.toLowerCase()) {
+//         case "monday":
+//             return num == 12;
+//         case "tuesday":
+//             return num > 95;
+//         case "wednesday":
+//             return num == 34;
+//         case "thursay":
+//             return num == 0;
+//         case "friday":
+//             return !(num%2);
+//         case "saturday":
+//             return num == 56;
+//         case "sunday":
+//             return Math.abs(num)==666;
+//     }
+// }
+
+// ELIMINATE UNSEt BITS
+function eliminateUnsetBits(number){
+    return number.split("").filter((value) =>value == 1).reduce((acc, cur, ind, arr) =>acc+ Math.pow(2,arr.index-1-ind) , 0);
 }
