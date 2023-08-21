@@ -47,12 +47,32 @@
     //     return arr.join(":")
     // }
 
-//DOUBLE CHARS
-function doubleChars(str){
-    return str.split("").map(char=> char + char).join("")
-}
+// //DOUBLE CHARS
+// function doubleChars(str){
+//     return str.split("").map(char=> char + char).join("")
+// }
 
-//EXTRACT THE DOMAIN NAME
-function domainName(url){
-    return str = url.split("/").filter(i => i.includes(".")).join("").split(".").filter((i) => i!="www" && i!='')[0]
+// //EXTRACT THE DOMAIN NAME
+// function domainName(url){
+//     return str = url.split("/").filter(i => i.includes(".")).join("").split(".").filter((i) => i!="www" && i!='')[0]
+// }
+
+// AM I AFRAID
+var amIAfraid= function(day,num){
+    switch (day.toLowerCase()) {
+        case "monday":
+            return num == 12;
+        case "tuesday":
+            return num > 95;
+        case "wednesday":
+            return num == 34;
+        case "thursay":
+            return num == 0;
+        case "friday":
+            return !(num%2);
+        case "saturday":
+            return num == 56;
+        case "sunday":
+            return Math.abs(num)==666;
+    }
 }
