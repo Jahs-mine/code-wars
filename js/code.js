@@ -33,19 +33,19 @@
 // }
 
 
- // GET MILITARY TIME
+// GET MILITARY TIME
 // var militaryTime = function (time) {
 //     let add = (time.splice(-2) == "PM") ? 12 : 0;
 
 //     let arr = time.slice(0, -2)
 
 //     if (arr[0] == "12" && add) {
-        // do nothing
-    //     }else if(arr[0]=="12"){arr[0]="00"}
-    //     else if(add){arr[0]= (+arr[0] +12) %24}
+// do nothing
+//     }else if(arr[0]=="12"){arr[0]="00"}
+//     else if(add){arr[0]= (+arr[0] +12) %24}
 
-    //     return arr.join(":")
-    // }
+//     return arr.join(":")
+// }
 
 // //DOUBLE CHARS
 // function doubleChars(str){
@@ -77,7 +77,12 @@
 //     }
 // }
 
-// ELIMINATE UNSEt BITS
-function eliminateUnsetBits(number){
-    return number.split("").filter((value) =>value == 1).reduce((acc, cur, ind, arr) =>acc+ Math.pow(2,arr.index-1-ind) , 0);
+// // ELIMINATE UNSEt BITS
+// function eliminateUnsetBits(number) {
+//     return number.split("").filter((value) => value == 1).reduce((acc, cur, ind, arr) => acc + Math.pow(2, arr.index - 1 - ind), 0);
+// }
+
+//  JULIE'S AGE
+const Age = function(x,y){
+    return Math.abs(x*y/(1-y))
 }
