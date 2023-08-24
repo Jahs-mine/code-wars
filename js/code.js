@@ -82,7 +82,12 @@
 //     return number.split("").filter((value) => value == 1).reduce((acc, cur, ind, arr) => acc + Math.pow(2, arr.index - 1 - ind), 0);
 // }
 
-//  JULIE'S AGE
-const Age = function(x,y){
-    return Math.abs(x*y/(1-y))
+// //  JULIE'S AGE
+// const Age = function(x,y){
+//     return Math.abs(x*y/(1-y))
+// }
+
+//  //NEXT PERFECT SQUARE
+function findNextSquare(sq){
+    return Number.isInteger(Math.pow(sq,0.5)) ? Math.pow(Math.pow(sq,0.5) + 1,2): -1;
 }
