@@ -88,6 +88,15 @@
 // }
 
 //  //NEXT PERFECT SQUARE
-function findNextSquare(sq){
-    return Number.isInteger(Math.pow(sq,0.5)) ? Math.pow(Math.pow(sq,0.5) + 1,2): -1;
+// function findNextSquare(sq){
+//     return Number.isInteger(Math.pow(sq,0.5)) ? Math.pow(Math.pow(sq,0.5) + 1,2): -1;
+// }
+
+// //FUNCTION MULTIPLE X
+function multiple(x){
+    let res;
+    if(x%3===0){res+="Bang"}
+    if(x%5===0){res+="Boom"}
+    if(res===""){res="Miss"}
+    return res
 }
