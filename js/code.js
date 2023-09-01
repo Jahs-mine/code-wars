@@ -107,3 +107,8 @@ function solution(fullText,searchText) {
     return (ind ==-1)? 0: 1 + solution(fullText.slice(ind + searchText.length),searchText);
     
 }
+
+function solution(start, finish) {
+    let factor = Math.floor((finish - start)/3);
+    return factor*-2 + finish - start    
+}
