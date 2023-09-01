@@ -100,3 +100,10 @@ function multiple(x){
     if(res===""){res="Miss"}
     return res
 }
+
+// return substring instance count
+function solution(fullText,searchText) {
+    let ind = fullText.indexOf(searchText);
+    return (ind ==-1)? 0: 1 + solution(fullText.slice(ind + searchText.length),searchText);
+    
+}
