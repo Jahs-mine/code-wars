@@ -112,3 +112,14 @@ function solution(start, finish) {
     let factor = Math.floor((finish - start)/3);
     return factor*-2 + finish - start    
 }
+
+// ZIPWITH
+function zipWith(fn,a0,a1){
+    let res = [], i = a0.length, j = a1.length;
+    let x = (i<j)? i: j;
+
+    for(let ind =0; ind<x; i++){
+        res.push(fn(a0[ind],a1[ind]))
+    }
+    return res
+}
