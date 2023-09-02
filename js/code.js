@@ -92,34 +92,45 @@
 //     return Number.isInteger(Math.pow(sq,0.5)) ? Math.pow(Math.pow(sq,0.5) + 1,2): -1;
 // }
 
-// //FUNCTION MULTIPLE X
-function multiple(x){
-    let res;
-    if(x%3===0){res+="Bang"}
-    if(x%5===0){res+="Boom"}
-    if(res===""){res="Miss"}
-    return res
+// // //FUNCTION MULTIPLE X
+// function multiple(x){
+//     let res;
+//     if(x%3===0){res+="Bang"}
+//     if(x%5===0){res+="Boom"}
+//     if(res===""){res="Miss"}
+//     return res
+// }
+
+// // return substring instance count
+// function solution(fullText,searchText) {
+//     let ind = fullText.indexOf(searchText);
+//     return (ind ==-1)? 0: 1 + solution(fullText.slice(ind + searchText.length),searchText);
+
+// }
+
+// function solution(start, finish) {
+//     let factor = Math.floor((finish - start)/3);
+//     return factor*-2 + finish - start    
+// }
+
+// // ZIPWITH
+// function zipWith(fn,a0,a1){
+//     let res = [], i = a0.length, j = a1.length;
+//     let x = (i<j)? i: j;
+
+//     for(let ind =0; ind<x; i++){
+//         res.push(fn(a0[ind],a1[ind]))
+//     }
+//     return res
+// }
+
+//BACK AND FORTH AND REVERSE
+function bfr(arr) {
+    if (arr.length == 0) { return [] };
+    if (arr.length <= 2) { return arr }
+   
+    return [arr.shift(), arr.pop(), ...bfr(arr.reverse())]
+
 }
 
-// return substring instance count
-function solution(fullText,searchText) {
-    let ind = fullText.indexOf(searchText);
-    return (ind ==-1)? 0: 1 + solution(fullText.slice(ind + searchText.length),searchText);
-    
-}
-
-function solution(start, finish) {
-    let factor = Math.floor((finish - start)/3);
-    return factor*-2 + finish - start    
-}
-
-// ZIPWITH
-function zipWith(fn,a0,a1){
-    let res = [], i = a0.length, j = a1.length;
-    let x = (i<j)? i: j;
-
-    for(let ind =0; ind<x; i++){
-        res.push(fn(a0[ind],a1[ind]))
-    }
-    return res
-}
+console.log(bfr([1, 2, 3, 4,5]))
